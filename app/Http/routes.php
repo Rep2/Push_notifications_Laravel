@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('test', function() {
+    dd (DB::connection()->getPdo());
+});
+
+Route::get('notification_test', 'NotificationTest@send_notification');
